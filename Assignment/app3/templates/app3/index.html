@@ -1,0 +1,53 @@
+<html>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f5;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        li {
+            background: #ffcccb;
+            border: 2px solid #ff7777;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2em;
+            color: #333;
+        }
+        li:nth-child(even) {
+            background: #add8e6;
+            border-color: #6495ed;
+        }
+        .factorial-key {
+            font-weight: bold;
+            color: #ff4500;
+        }
+        .factorial-value {
+            color: #4682b4;
+        }
+    </style>
+
+
+    <body>
+        <h1>List of Factorials</h1>
+        <ul>
+            {% for key, value in factorials.items %}
+                <li>{{ key }} ! = {{ value }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+    
+</html>

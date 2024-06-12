@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String Permutations</title>
+    <style>
+        li{
+            margin-top:5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>String Permutations</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="input_string">Enter a string:</label>
+        <input type="text" id="input_string" name="input_string" required>
+        <button type="submit">Get Permutations</button>
+    </form>
+    {% if permutations %}
+        <h2>All possibilities of the string "{{ input_string }}":</h2>
+        <ul>
+            {% for permutation in permutations %}
+                <li>{{ permutation }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
